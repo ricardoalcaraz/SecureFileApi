@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=74a2383e_002D1786_002D41e1_002Dbd72_002Df8c8644b1238/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestMethod1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::9AE3A163-F882-4693-A535-CE3675128B7C::net6.0::ImageApiIntegrationTests.UnitTest1.TestMethod1&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::9AE3A163-F882-4693-A535-CE3675128B7C::net6.0::ImageApiIntegrationTests.UnitTest1.TestMethod2&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::9AE3A163-F882-4693-A535-CE3675128B7C::net6.0::ImageApiIntegrationTests.UnitTest1.GetImage&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::9AE3A163-F882-4693-A535-CE3675128B7C::net6.0::ImageApiIntegrationTests.UnitTest1.GetWeather&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

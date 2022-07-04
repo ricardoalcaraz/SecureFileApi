@@ -1,0 +1,15 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=998fdc11_002Dc33e_002D4c97_002D8b6b_002D08883f4e59e5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;And&gt;
+      &lt;TestAncestor&gt;
+        &lt;TestId&gt;MSTest::9AE3A163-F882-4693-A535-CE3675128B7C::net6.0::ImageApiIntegrationTests.UnitTest1.UploadImageThroughFrom&lt;/TestId&gt;
+      &lt;/TestAncestor&gt;
+      &lt;Project Location="/Users/ralcaraz/RiderProjects/ImageApi/ImageApiIntegrationTests" Presentation="&amp;lt;ImageApiIntegrationTests&amp;gt;" /&gt;
+      &lt;Namespace&gt;ImageApiIntegrationTests&lt;/Namespace&gt;
+    &lt;/And&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;MSTest::9AE3A163-F882-4693-A535-CE3675128B7C::net6.0::ImageApiIntegrationTests.UnitTest1.UseGrpc&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+  &lt;/Or&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

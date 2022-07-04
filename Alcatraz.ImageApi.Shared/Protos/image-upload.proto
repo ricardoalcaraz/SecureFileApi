@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "ImageRpc";
+
+package images;
+
+// The greeting service definition.
+service ImageUploader {
+  // Sends a greeting
+  rpc UploadImage (stream ImageUploadRequest) returns (ImageUploadResponse);
+}
+
+message ImageUploadRequest {
+  int32 FileSize = 1;
+  int32 BytesUploaded = 2;
+  optional string Hash = 3;
+  bytes DataPacket = 4;
+}
+
+
+// If the request is valid then a unique guid is given and data uploading can commence
+message ImageUploadResponse {
+  optional string ImageId = 1;
+  optional string Hash = 3;
+}
