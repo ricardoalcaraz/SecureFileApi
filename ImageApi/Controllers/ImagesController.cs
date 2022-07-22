@@ -2,6 +2,7 @@ using System.Buffers;
 using Alcatraz.ImageApi.Shared.Models;
 using Blake2Fast;
 using ImageApi.Data;
+using ImageApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -14,13 +15,18 @@ namespace ImageApi.Controllers;
 public class ImagesController : ControllerBase
 {
     private readonly ImageDbContext _dbContext;
+    private readonly ImageSavingService _imageSavingService;
     private readonly ILogger<ImagesController> _logger;
     private readonly ImageApiOptions _imageApiOptions;
     private readonly Uri _fileSaveLocation;
 
-    public ImagesController(IOptionsMonitor<ImageApiOptions> optionsMonitor, ImageDbContext dbContext, ILogger<ImagesController> logger)
+    public ImagesController(IOptionsMonitor<ImageApiOptions> optionsMonitor, 
+        ImageDbContext dbContext, 
+        ImageSavingService imageSavingService,
+        ILogger<ImagesController> logger)
     {
         _dbContext = dbContext;
+        _imageSavingService = imageSavingService;
         _logger = logger;
         _imageApiOptions = optionsMonitor.CurrentValue ?? throw new ArgumentNullException(nameof(optionsMonitor));
         _fileSaveLocation = optionsMonitor.CurrentValue.SaveLocation!;
@@ -37,7 +43,7 @@ public class ImagesController : ControllerBase
         
         await using var readStream = fileUpload.File.OpenReadStream();
 
-        var (image, format) = await Image.LoadWithFormatAsync(readStream, ctx);
+        
 
         if (image is null)
         {
@@ -45,6 +51,7 @@ public class ImagesController : ControllerBase
         }
         _logger.LogInformation("{FileUpload} - Supported Image {ImageFormat}", fileUpload, format);
 
+        await _imageSavingService.SaveImage()
         var memoryStream = new MemoryStream();
         
         image.SaveAsWebp(memoryStream);

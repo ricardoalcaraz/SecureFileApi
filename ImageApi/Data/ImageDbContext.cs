@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ImageApi.Data;
@@ -17,7 +18,7 @@ public class ImageInfo
 {
     public Guid Id { get; set; }
     public byte[] Hash { get; set; }
-    public Uri FileLocation { get; set; }
+    public Uri FileLocation { get; set; } = null!;
     public Guid UploaderId { get; set; }
     public DateTime DateCreated { get; set; } = DateTime.UtcNow;
 }
